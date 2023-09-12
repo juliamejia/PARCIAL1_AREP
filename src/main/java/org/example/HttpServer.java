@@ -51,6 +51,13 @@ public class HttpServer {
                     if (requests.length == 1){
                         outputLine = getHello() + getClass(request);
                     }
+                    //intento de los otros metodos
+                    //    else if (requests.length == 2){
+                    //      outputLine = getHello() + invoke(request);
+                    //}
+                    //else if (requests.length==3){
+                    //  outputLine = getHello() + unaryInvoke(request)
+                    //}
                 }catch (Exception e){
                     e.printStackTrace();
                 }
@@ -68,10 +75,20 @@ public class HttpServer {
 
 
 
+    //getClass corrieno bien
    public static String getClass(String clase) throws ClassNotFoundException {
        Class<?> c = Class.forName(clase);
        return c.getName().toString();
    }
+
+   //public static String unaryInvoke (String parametro){
+   //     return "";
+   //}
+
+   public static String invoke (String parametro){
+        return "";
+   }
+
 
     public static String indexHtml()
     {
