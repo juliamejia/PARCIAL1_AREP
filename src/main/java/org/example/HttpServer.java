@@ -49,7 +49,7 @@ public class HttpServer {
                 try{
                     String[] requests = request.split(",");
                     if (requests.length == 1){
-                        outputLine = getHello() + indexHtml();
+                        outputLine = getHello() + getClass(request);
                     }
                 }catch (Exception e){
                     e.printStackTrace();
